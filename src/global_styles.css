@@ -1,0 +1,88 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #004080 0%, #1a0033 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.logo-container {
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 40px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+  margin: 0;
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin: 1rem 0 2rem;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.login-button {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  font-size: 16px;
+  background-color: #3f51b5;
+}
+
+.forgot-password {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.forgot-password a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+.login-as-user {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+}
+
+.login-as-user a {
+  margin-left: 0.5rem;
+}
+
+/* Material overrides */
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.mat-mdc-form-field-appearance-outline .mat-mdc-form-field-wrapper {
+  margin: 0;
+}
