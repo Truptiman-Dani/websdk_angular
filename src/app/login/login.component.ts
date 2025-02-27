@@ -17,30 +17,31 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule
   ],
   template: `
+    <div class="top-bar">
+      <img src="assets/whatsloan.png" alt="WhatsLoan" class="logo">
+    </div>
+
     <div class="login-container">
-      <div class="logo-container">
-        <img src="assets/whatsloan-logo.png" alt="WhatsLoan" class="logo">
-      </div>
       <div class="login-card">
         <h2>Login</h2>
         <p class="subtitle">Login to Upload/Validate or view Profiles</p>
         
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
           <mat-form-field appearance="outline" class="full-width">
-            <input matInput formControlName="username" placeholder="9900390180">
+            <input matInput formControlName="username" placeholder="Please enter your mobile number">
             <mat-error *ngIf="loginForm.get('username')?.hasError('required')">
-              Username is required
+              Mobile number is required
             </mat-error>
           </mat-form-field>
 
           <mat-form-field appearance="outline" class="full-width">
-            <input matInput type="password" formControlName="password" placeholder="********">
+            <input matInput type="password" formControlName="password" placeholder="Please enter your password">
             <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
               Password is required
             </mat-error>
           </mat-form-field>
 
-          <button mat-raised-button color="primary" class="full-width login-button" type="submit">
+          <button mat-raised-button color="primary" class="login-button" type="submit">
             Login
           </button>
 
@@ -55,7 +56,46 @@ import { CommonModule } from '@angular/common';
         </form>
       </div>
     </div>
-  `
+  `,
+  styles: [`
+    .top-bar {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      background:white solid;
+      padding: 0 1rem;
+    }
+
+    .logo {
+      height: 40px;
+      padding: 1rem;
+    }
+
+    .login-container {
+      min-height: calc(100vh - 60px);
+      background: linear-gradient(135deg, #004080 0%, #1a0033 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .login-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-top: -6rem;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+  `]
 })
 export class LoginComponent {
   loginForm: FormGroup;
