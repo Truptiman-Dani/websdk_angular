@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router'; // Import Router for navigation
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -63,8 +64,7 @@ import { CommonModule } from '@angular/common';
       height: 60px;
       display: flex;
       align-items: center;
-      // justify-content: center;
-      background:white solid;
+      background: white;
       padding: 0 1rem;
     }
 
@@ -100,7 +100,7 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) { // Inject Router
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -109,8 +109,15 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      console.log('Form submitted:', this.loginForm.value);
-      // Add your login logic here
+      const { username, password } = this.loginForm.value;
+
+      // Mock Authentication (Replace this with API call)
+      if (username === '1234567890' && password === 'admin123') {
+        console.log('Login successful:', this.loginForm.value);
+        this.router.navigate(['/app/components/view-profiles']); // Redirect after login
+      } else {
+        alert('Invalid username or password. Try again.');
+      }
     }
   }
 }
