@@ -42,7 +42,7 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [
     `.view-profiles {
-      padding: 2rem;
+      padding: 1rem;
     }
 
     .search-box {

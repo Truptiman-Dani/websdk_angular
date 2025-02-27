@@ -110,14 +110,18 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       const { username, password } = this.loginForm.value;
-
-      // Mock Authentication (Replace this with API call)
-      if (username === '1234567890' && password === 'admin123') {
-        console.log('Login successful:', this.loginForm.value);
-        this.router.navigate(['/app/components/view-profiles']); // Redirect after login
-      } else {
-        alert('Invalid username or password. Try again.');
-      }
+  
+      // Add a 10-second delay before authentication
+      setTimeout(() => {
+        // Mock Authentication (Replace this with API call)
+        if (username === '1234567890' && password === 'admin123') {
+          console.log('Login successful:', this.loginForm.value);
+          this.router.navigate(['/app/view-profiles']); // Redirect after login
+        } else {
+          alert('Invalid username or password. Try again.');
+        }
+      }, 10000); // 10000 milliseconds = 10 seconds
     }
   }
+  
 }
