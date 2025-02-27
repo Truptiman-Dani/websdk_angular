@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-    selector: 'app-base-layout',
-    standalone: true,
-    imports: [CommonModule, RouterModule, MatButtonModule, MatIconModule],
-    template: `
+  selector: 'app-base-layout',
+  standalone: true,
+  imports: [CommonModule, RouterModule, MatButtonModule, MatIconModule],
+  template: `
     <div class="dashboard-container">
       <div class="top-bar">
         <img src="assets/whatsloan.png" alt="WhatsLoan" class="logo">
         <span class="user-name">Timmana Gouda</span>
+        <button mat-button (click)="logout()">Logout</button>
       </div>
       
       <div class="content">
@@ -35,8 +36,8 @@ import { MatIconModule } from '@angular/material/icon';
       </div>
     </div>
   `,
-    styles: [
-        `.dashboard-container {
+  styles: [
+    `.dashboard-container {
       display: flex;
       flex-direction: column;
       height: 100vh;
@@ -56,54 +57,60 @@ import { MatIconModule } from '@angular/material/icon';
     }
 
     .content {
-  display: flex;
-  height: 100vh;
-  background: #f4f7fc;
-}
+      display: flex;
+      height: 100vh;
+      background: #f4f7fc;
+    }
 
-/* Sidebar Styling */
-.sidebar {
-  width: 280px;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-}
+    /* Sidebar Styling */
+    .sidebar {
+      width: 280px;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
 
-.sidebar button {
-  width: 100%;
-  text-align: left;
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 12px;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-}
+    .sidebar button {
+      width: 100%;
+      text-align: left;
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 12px;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+    }
 
-.sidebar button:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
+    .sidebar button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
-/* Highlight Active Route */
-.sidebar .active {
-  background: rgba(255, 255, 255, 0.3);
-  font-weight: bold;
-  border-left: 5px solid #ffcc00;
-  padding-left: 16px;
-}
+    /* Highlight Active Route */
+    .sidebar .active {
+      background: rgba(255, 255, 255, 0.3);
+      font-weight: bold;
+      border-left: 5px solid #ffcc00;
+      padding-left: 16px;
+    }
 
-/* Main Content */
-.main-content {
-  flex: 1;
-  padding: 2rem;
-  background: white;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-}
-
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 2rem;
+      background: white;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+    }
   `]
 })
-export class BaseLayoutComponent { }
+export class BaseLayoutComponent {
+    constructor(private router: Router) {}
+  
+    logout(): void {
+      localStorage.removeItem('user'); // Clear session if applicable
+      this.router.navigate(['/login']); // Navigate to login
+    }
+  }

@@ -4,13 +4,14 @@ import { ViewProfilesComponent } from './components/view-profiles.component';
 import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
-  { path: '', component: LoginComponent },  // Default route - login page
+  { path: 'login', component: LoginComponent }, // Explicit login path
+  { path: '', redirectTo: 'login', pathMatch: 'full' }, // Redirect empty path to login
   {
     path: 'app',
     component: BaseLayoutComponent,
     children: [
       { path: 'view-profiles', component: ViewProfilesComponent },
-      { path: '', redirectTo: 'view-profiles', pathMatch: 'full' }  // Default child route
+      { path: '', redirectTo: 'view-profiles', pathMatch: 'full' } // Default child route
     ]
   }
 ];
