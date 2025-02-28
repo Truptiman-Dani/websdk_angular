@@ -120,7 +120,7 @@ export class LoginComponent {
         } else {
           alert('Invalid username or password. Try again.');
         }
-      }, 10000); // 10000 milliseconds = 10 seconds
+      }, 5000); // 10000 milliseconds = 10 seconds
     }
   }
   
