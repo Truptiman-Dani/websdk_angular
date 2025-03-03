@@ -13,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
       <div class="top-bar">
         <img src="assets/whatsloan.png" alt="WhatsLoan" class="logo">
         <span class="user-name">Timmana Gouda</span>
-        <button mat-button (click)="logout()">Logout</button>
+        <button mat-button class="logoutBT" (click)="logout()">Logout</button>
       </div>
       
       <div class="content">
@@ -104,6 +104,14 @@ import { MatIconModule } from '@angular/material/icon';
       box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
       border-radius: 10px;
     }
+    .logoutBT{
+      background:rgb(43, 133, 250);
+      color: #000;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: 16px;
+      font-weight: 300;
+      cursor: pointer;}
   `]
 })
 export class BaseLayoutComponent {
