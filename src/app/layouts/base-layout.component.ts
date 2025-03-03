@@ -19,14 +19,14 @@ import { MatIconModule } from '@angular/material/icon';
       <div class="content">
         <!-- Sidebar -->
         <div class="sidebar">
-            <button mat-button routerLink="/add-profile" routerLinkActive="active">+ Add Profile</button>
-            <button mat-button routerLink="/view-profiles" routerLinkActive="active">View Profiles</button>
-            <button mat-button routerLink="/create-users" routerLinkActive="active">Create Users</button>
-            <button mat-button routerLink="/mis" routerLinkActive="active">MIS</button>
-            <button mat-button routerLink="/summary" routerLinkActive="active">Summary</button>
-            <button mat-button routerLink="/sanctioned-loans" routerLinkActive="active">Sanctioned Loans</button>
-            <button mat-button routerLink="/incomplete" routerLinkActive="active">Incomplete</button>
-            <button mat-button routerLink="/failure-cases" routerLinkActive="active">Failure Cases</button>
+            <button mat-button routerLink="/app/view-profiles" routerLinkActive="active">View Profiles</button>
+            <button mat-button routerLink="/app/add-profile" routerLinkActive="active">+ Add Profile</button>
+            <button mat-button routerLink="/app/create-users" routerLinkActive="active">Create Users</button>
+            <button mat-button routerLink="/app/mis" routerLinkActive="active">MIS</button>
+            <button mat-button routerLink="/app/summary" routerLinkActive="active">Summary</button>
+            <button mat-button routerLink="/app/sanctioned-loans" routerLinkActive="active">Sanctioned Loans</button>
+            <button mat-button routerLink="/app/incomplete" routerLinkActive="active">Incomplete</button>
+            <button mat-button routerLink="/app/failure-cases" routerLinkActive="active">Failure Cases</button>
         </div>
 
         <!-- Main Content Area -->
@@ -113,4 +113,4 @@ export class BaseLayoutComponent {
       localStorage.removeItem('user'); // Clear session if applicable
       this.router.navigate(['/login']); // Navigate to login
     }
-  }
+}
