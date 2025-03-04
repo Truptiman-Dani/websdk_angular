@@ -1,5 +1,8 @@
 <div class="top-bar">
-    <img src="assets/whatsloan.png" alt="WhatsLoan" class="logo">
+    <a href="/login">
+        <img src="assets/whatsloan.png" alt="WhatsLoan" class="logo">
+    </a>
+    
 </div>
 
 <div class="login-container">
@@ -33,7 +36,7 @@
 
             <div class="login-as-user">
                 <span>Login as User? </span>
-                <a mat-button color="primary" href="#">Login Here</a>
+                <a mat-button color="primary" [routerLink]="'/user-login'">Login Here</a>
             </div>
         </form>
     </div>

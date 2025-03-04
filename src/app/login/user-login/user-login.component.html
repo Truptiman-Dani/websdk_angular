@@ -1,0 +1,29 @@
+<div class="top-bar">
+    <a href="/login">
+        <img src="assets/whatsloan.png" alt="WhatsLoan" class="logo-left">
+    </a>    
+</div>
+
+<div class="login-container">
+    <div class="login-card">
+        <h2>Login with Mobile number</h2>
+        <p class="subtitle">Login to Create/View Profiles</p>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="outline" class="full-width">
+                <input matInput formControlName="mobileNumber" placeholder="Enter Mobile Number to continue">
+                <mat-error *ngIf="loginForm.get('mobileNumber')?.hasError('required')">
+                    Mobile number is required
+                </mat-error>
+                <mat-error *ngIf="loginForm.get('mobileNumber')?.hasError('pattern')">
+                    Enter a valid 10-digit mobile number
+                </mat-error>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="login-button" type="submit"
+                [disabled]="loginForm.invalid">
+                Proceed
+            </button>
+        </form>
+    </div>
+</div>

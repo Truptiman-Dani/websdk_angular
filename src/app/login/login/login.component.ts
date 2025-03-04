@@ -7,6 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { UserLoginComponent } from '../user-login/user-login.component';
 
 
 @Component({
@@ -18,7 +20,8 @@ import { RouterModule } from '@angular/router';
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
