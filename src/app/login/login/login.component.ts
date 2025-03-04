@@ -43,7 +43,7 @@ export class LoginComponent {
       setTimeout(() => {
         if (username === '1234567890' && password === 'admin123') {
           console.log('Login successful:', this.loginForm.value);
-          this.router.navigate(['/app/view-profiles']);
+          this.router.navigate(['/admin/view-profiles']);
         } else {
           alert('Invalid username or password. Try again.');
         }

@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-base-layout',
+  selector: 'admin-base-layout',
   standalone: true,
   imports: [CommonModule, RouterModule, MatButtonModule, MatIconModule],
   template: `
@@ -19,14 +19,14 @@ import { MatIconModule } from '@angular/material/icon';
       <div class="content">
         <!-- Sidebar -->
         <div class="sidebar">
-            <button mat-button routerLink="/app/view-profiles" routerLinkActive="active">View Profiles</button>
-            <button mat-button routerLink="/app/add-profile" routerLinkActive="active">+ Add Profile</button>
-            <button mat-button routerLink="/app/create-users" routerLinkActive="active">Create Users</button>
-            <button mat-button routerLink="/app/mis" routerLinkActive="active">MIS</button>
-            <button mat-button routerLink="/app/summary" routerLinkActive="active">Summary</button>
-            <button mat-button routerLink="/app/sanctioned-loans" routerLinkActive="active">Sanctioned Loans</button>
-            <button mat-button routerLink="/app/incomplete" routerLinkActive="active">Incomplete</button>
-            <button mat-button routerLink="/app/failure-cases" routerLinkActive="active">Failure Cases</button>
+            <button mat-button routerLink="/admin/view-profiles" routerLinkActive="active">View Profiles</button>
+            <button mat-button routerLink="/admin/add-profile" routerLinkActive="active">+ Add Profile</button>
+            <button mat-button routerLink="/admin/create-users" routerLinkActive="active">Create Users</button>
+            <button mat-button routerLink="/admin/mis" routerLinkActive="active">MIS</button>
+            <button mat-button routerLink="/admin/summary" routerLinkActive="active">Summary</button>
+            <button mat-button routerLink="/admin/sanctioned-loans" routerLinkActive="active">Sanctioned Loans</button>
+            <button mat-button routerLink="/admin/incomplete" routerLinkActive="active">Incomplete</button>
+            <button mat-button routerLink="/admin/failure-cases" routerLinkActive="active">Failure Cases</button>
         </div>
 
         <!-- Main Content Area -->
@@ -118,7 +118,7 @@ export class BaseLayoutComponent {
     constructor(private router: Router) {}
   
     logout(): void {
-      localStorage.removeItem('user'); // Clear session if applicable
+      localStorage.removeItem('user'); // Clear session if adminlicable
       this.router.navigate(['/login']); // Navigate to login
     }
 }
