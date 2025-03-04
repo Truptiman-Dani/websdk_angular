@@ -1,10 +1,17 @@
 import { Routes } from '@angular/router';
 import { BaseLayoutComponent } from './layouts/base-layout.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './login/login/login.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent }, 
   { path: '', redirectTo: 'login', pathMatch: 'full' }, 
+
+  {
+    path: 'login/forgotten-password',
+    loadComponent: () => import('./login/forgotten-password/forgotten-password.component')
+      .then(m => m.ForgottenPasswordComponent)
+  },
+  
 
   {
     path: 'app',

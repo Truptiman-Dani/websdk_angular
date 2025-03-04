@@ -1,0 +1,40 @@
+<div class="top-bar">
+    <img src="assets/whatsloan.png" alt="WhatsLoan" class="logo">
+</div>
+
+<div class="login-container">
+    <div class="login-card">
+        <h2>Login</h2>
+        <p class="subtitle">Login to Upload/Validate or view Profiles</p>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="outline" class="full-width">
+                <input matInput formControlName="username" placeholder="Please enter your mobile number">
+                <mat-error *ngIf="loginForm.get('username')?.hasError('required')">
+                    Mobile number is required
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+                <input matInput type="password" formControlName="password" placeholder="Please enter your password">
+                <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+                    Password is required
+                </mat-error>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="login-button" type="submit">
+                Login
+            </button>
+
+            <div class="forgot-password">
+                <a [routerLink]="'/login/forgotten-password'">Forgot Password?</a>
+            </div>
+
+
+            <div class="login-as-user">
+                <span>Login as User? </span>
+                <a mat-button color="primary" href="#">Login Here</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,1 +1,31 @@
-<p>add-profile works!</p>
+<div class="add-profile-container">
+    <div class="add-profile-card">
+      <h2 style="margin-top: -40px;">Add Profile</h2>
+      <form (ngSubmit)="submitProfile()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Type of Profile</mat-label>
+          <mat-select [(ngModel)]="profileType" name="profileType" required>
+            <mat-option value="Admin">Admin</mat-option>
+            <mat-option value="User">User</mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Profile Name</mat-label>
+          <input matInput type="text" [(ngModel)]="profileName" name="profileName" required placeholder="Enter Profile Name (As per Photo ID)">
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Profile Email</mat-label>
+          <input matInput type="email" [(ngModel)]="profileEmail" name="profileEmail" required placeholder="Enter Profile / Business Mail ID">
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Profile Mobile Number</mat-label>
+          <input matInput type="text" [(ngModel)]="profileMobile" name="profileMobile" required placeholder="Enter Profile Mobile Number">
+        </mat-form-field>
+        
+        <button mat-raised-button color="primary" class="submit-button" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
