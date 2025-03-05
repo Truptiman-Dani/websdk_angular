@@ -1,1 +1,119 @@
-<p>create-users works!</p>
+<form class="create-users-form">
+    <h2>Loan Application Form for Agricultural Credit</h2>
+    
+    <label for="bankName">Name of Bank:</label>
+    <input type="text" id="bankName" name="bankName" required>
+  
+    <label for="branchName">Branch Name:</label>
+    <input type="text" id="branchName" name="branchName" required>
+  
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required>
+  
+    <label for="bcAgriTech">BC/AGRI TECH:</label>
+    <input type="text" id="bcAgriTech" name="bcAgriTech">
+  
+    <h3>Application Details</h3>
+    <label for="applicationNo">Application Sl. No:</label>
+    <input type="text" id="applicationNo" name="applicationNo" required>
+  
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" required>
+  
+    <label for="sf">SF:</label>
+    <input type="text" id="sf" name="sf">
+  
+    <label for="mf">MF:</label>
+    <input type="text" id="mf" name="mf">
+  
+    <label for="others">Others:</label>
+    <input type="text" id="others" name="others">
+  
+    <h3>Type of KCC/ Amount of Loan Required</h3>
+    <label>
+      <input type="checkbox" name="loanType" value="freshKCC"> Issue of Fresh KCC
+    </label>
+    <label>
+      <input type="checkbox" name="loanType" value="enhancement"> Enhancement of Existing Limit
+    </label>
+    <label>
+      <input type="checkbox" name="loanType" value="activation"> Activation of Inoperative KCC Account
+    </label>
+  
+    <label for="loanAmount">Amount of Loan Required:</label>
+    <input type="number" id="loanAmount" name="loanAmount" required>
+  
+    <h3>Particulars of the Applicant(s)</h3>
+    <label for="applicantName">Name of the Applicant:</label>
+    <input type="text" id="applicantName" name="applicantName" required>
+  
+    <label for="accountNumber">Account No (PM Kisan Beneficiary):</label>
+    <input type="text" id="accountNumber" name="accountNumber" required>
+  
+    <h3>Insurance Scheme</h3>
+    <label>PMSBY Consent:</label>
+    <label>
+      <input type="checkbox" name="insuranceConsent" value="yes"> Yes
+    </label>
+    <label>
+      <input type="checkbox" name="insuranceConsent" value="no"> No
+    </label>
+  
+    <h3>Land Holdings and Crops</h3>
+    <label for="villageName">Name of Village:</label>
+    <input type="text" id="villageName" name="villageName">
+    
+    <label for="surveyNumber">Survey/Khasra No.:</label>
+    <input type="text" id="surveyNumber" name="surveyNumber">
+  
+    <label for="ownedLand">Owned Land (acres):</label>
+    <input type="number" id="ownedLand" name="ownedLand">
+  
+    <label for="leasedLand">Leased Land (acres):</label>
+    <input type="number" id="leasedLand" name="leasedLand">
+  
+    <label for="shopCropped">Shop Cropped Land (acres):</label>
+    <input type="number" id="shopCropped" name="shopCropped">
+  
+    <label for="kharifCrops">Kharif Crops:</label>
+    <input type="text" id="kharifCrops" name="kharifCrops">
+  
+    <label for="rabiCrops">Rabi Crops:</label>
+    <input type="text" id="rabiCrops" name="rabiCrops">
+    
+    <label for="otherCrops">Other Crops:</label>
+    <input type="text" id="otherCrops" name="otherCrops">
+  
+    <h3>Fisheries and Animal Husbandry</h3>
+    <label for="totalDairy">Total Productive Dairy Animals:</label>
+    <input type="number" id="totalDairy" name="totalDairy">
+  
+    <label for="totalSheep">Total Sheep and Goats:</label>
+    <input type="number" id="totalSheep" name="totalSheep">
+  
+    <label for="totalPigs">Total Pigs:</label>
+    <input type="number" id="totalPigs" name="totalPigs">
+  
+    <label for="totalPoultry">Total Poultry:</label>
+    <input type="number" id="totalPoultry" name="totalPoultry">
+  
+    <label for="inlandFisheries">Inland Fisheries & Aquaculture:</label>
+    <input type="text" id="inlandFisheries" name="inlandFisheries">
+  
+    <label for="marineFisheries">Marine Fisheries & Mariculture:</label>
+    <input type="text" id="marineFisheries" name="marineFisheries">
+  
+    <h3>Security Proposed to be Offered</h3>
+    <label for="primarySecurity">Particulars of Primary Security Offered:</label>
+    <input type="text" id="primarySecurity" name="primarySecurity">
+  
+    <label for="collateralSecurity">Particulars of Collateral Security (where applicable):</label>
+    <input type="text" id="collateralSecurity" name="collateralSecurity">
+  
+    <h3>Declaration</h3>
+    <p>I/We hereby declare that all information furnished by me/us is true, correct, and complete to the best of my/our knowledge and belief.</p>
+    
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+  

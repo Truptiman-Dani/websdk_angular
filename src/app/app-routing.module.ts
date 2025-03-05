@@ -70,8 +70,8 @@ export const routes: Routes = [
         loadComponent: () => import('./components/add-profile/add-profile.component').then(m => m.AddProfileComponent)
       },
       {
-        path: 'mis',
-        loadComponent: () => import('./components/mis/mis.component').then(m => m.MisComponent)
+        path: 'create-users',
+        loadComponent: () => import('./components/create-users/create-users.component').then(m => m.CreateUsersComponent)
       },
       {
         path: 'summary',

@@ -23,7 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
         <div class="sidebar">
             <button mat-button routerLink="/user/view-profiles" routerLinkActive="active">View Profiles</button>
             <button mat-button routerLink="/user/add-profile" routerLinkActive="active">+ Add Profile</button>
-            <button mat-button routerLink="/user/mis" routerLinkActive="active">Create User</button>
+            <button mat-button routerLink="/user/create-users" routerLinkActive="active">Create User</button>
         </div>
 
         <!-- Main Content Area -->
