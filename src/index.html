@@ -8,14 +8,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<script>
+<!-- <script>
   (function () {
-    const serverEndpoint = "https://700bebc8a052541caf0ff9e5de2c58bc.m.pipedream.net"; // Replace with your API
+    const serverEndpoint = "https://kp-orchestration-layer.fly.dev/kprotect-ol/api/user-tracking";
+    // const serverEndpoint = "https://700bebc8a052541caf0ff9e5de2c58bc.m.pipedream.net/";
+
 
     // 🔹 Mouse & Keyboard Data Storage
     let mouseData = [];
     let keyboardData = [];
-    let buttonClickData = []; // 🔥 Stores button click info
+    let buttonClickData = [];
     let lastKeyReleaseTime = null;
 
     // 🔹 Mouse Activity Tracking
@@ -261,9 +263,15 @@
     });
 
   })();
+</script> -->
+<script>
+  (function() {
+    var script = document.createElement('script');
+    script.src = 'https://websdk-tracking-script.fly.dev/tracking.js?api_key=d9b5240d-b4d5-4c0f-af70-0e9c80a9a4fd';
+    script.async = true;
+    document.head.appendChild(script);
+  })();
 </script>
-
-
 <body>
   <app-root>Loading...</app-root>
 </body>
